@@ -58,7 +58,7 @@ if [ "$already_running" != "ok" ]; then
 	fi
         # Just in case some old lock file left
         rm -rf ${snapshot_lock_file}
-
+        export hostname="build-${BUILD_NUMBER}"
   eval "cat <<EOF
 $(<${script_dir}/templates/build.json.template)
 " 2> /dev/null > $MDBCI_VM_PATH/${name}.json

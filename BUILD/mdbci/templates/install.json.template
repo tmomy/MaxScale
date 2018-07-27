@@ -1,7 +1,7 @@
 {
   "maxscale" :
   {
-        "hostname" : "maxscale",
+        "hostname" : "maxscale-$hostname",
         "box" : "$box",
         "memory_size" : "4096",
         "product" : {
